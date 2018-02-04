@@ -1,0 +1,95 @@
+* {
+    margin:0;
+    padding:0;
+}
+html, body {
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+a {
+    text-decoration: none;
+}
+.pos {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    z-index:1;
+}
+.hide {
+    display:none;
+}
+@-webkit-keyframes flash {
+    0%, 100%, 50% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+@keyframes flash {
+    0%, 100%, 50% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+.flash {
+    -webkit-animation: flash 2s forwards infinite;
+    animation: flash 2s forwards infinite;
+}
+
+.fullpage-wrapper {
+    height:100%;
+    position:relative;
+    touch-action: none;
+    transform: translate3d(0,0,0);
+}
+.page1 {
+    height:100%;
+    background: url(img/bg.jpg) center top/cover no-repeat;
+    overflow: hidden;
+    position:relative;
+}
+.page1 .part {
+    height:100%;
+}
+.page1 .part img {
+    width:100%;
+}
+.page1 .part .tree {
+    text-align:center;
+}
+.page1 .part .folder {
+    z-index:3;
+}
+.page1 .part .bottom {
+    bottom:0;
+    top:auto;
+}
+/* 礼盒 */
+.gift {
+    position:fixed;
+    width:100%;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:9;
+    max-width: 640px;
+    margin:0 auto;
+}
+.gift img {
+    width:100%;
+}
+/* 弹窗 */
+.pop_show {
+    z-index:3;
+    height:100%;
+    background-color:rgba(0,0,0,0.85);
+}
+.pop_show img {
+    width:100%;
+}
