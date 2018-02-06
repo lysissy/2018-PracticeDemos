@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../public/jquery-3.3.1.js"></script>
+<script>
+    var array = ["a","b", "a", "c", "b"];
+    function changeState(array) {
+        var array_copy = new Array();   // 创建临时对象，用来返回处理结果。不要污染原数据！
+        var status = new Array();       // array的状态组
+        // var status_copy = new Array();  // 状态组的拷贝
+        var rules = ["a", "b", "c"];
+        var rules_len = rules.length;
+
+        // copy数据，转化状态
+        for (var i=0, len_a = array.length; i<len_a; i++) {
+            switch (array[i]) {
+                case "a":
+                    status[i] = 0;
+                    break;
+                case "b":
+                    status[i] = 1;
+                    break;
+                case "c":
+                    status[i] = 2;
+                    break;
+                default:
+                    // 处理异常情况
+                    status[i] = null;
+            }
+            array_copy[i] = array[i];
+        }
+        console.log(status);
+
+        // 转换状态组 做判断
+        for(var j=1, count; j<status.length; ){
+            // 如果(pre+1)%rules_len 和当前项相同，则顺利迭代，不需要处理
+            if(  (status[j-1]+1)%rules_len === status[j]  ){
+                j++;
+                count = 0;  // 恢复正常情况，count值要重置为0
+            } else {
+                // 需要矫正、补全数据
+
+                // 追加的数据不能超过规则的个数，防止产生死循环。
+                if(count>rules_len) break;
+                count++;
+
+                // 如果不符合要求，需要补全数据，j指针不能迭代！！！！
+                status.splice(j, 0, (status[j-1]+1)%rules_len );
+
+                // 修补原array中的数据
+                array_copy.splice(j, 0, rules[j%rules_len]);
+            }
+
+        }
+
+        // 检查是否需要补全尾号数据
+        if(status.length%rules_len !== 0) {
+
+            var add_tail = rules_len - status.length%rules_len;     //需要添加的tail数据
+
+            for(var k = add_tail; k>0; k--) {   //修补最后的tail数据
+                status.push(rules_len-k);
+
+                // 修补原array中的数据
+                array_copy.push(rules[rules_len-k]);
+            }
+        }
+
+        console.log(status);
+        console.log(array);
+        console.log(array_copy);
+        return  ;
+    }
+    changeState(array);
+</script>
+</body>
+</html>
