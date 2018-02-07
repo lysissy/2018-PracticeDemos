@@ -7,13 +7,29 @@
 <body>
 <script src="../public/jquery-3.3.1.js"></script>
 <script>
-    var array = ["a","b", "a", "c", "b"];
+    var array = ["b", "a", "b", "a", "c", "b"];
     function changeState(array) {
         var array_copy = new Array();   // 创建临时对象，用来返回处理结果。不要污染原数据！
         var status = new Array();       // array的状态组
-        // var status_copy = new Array();  // 状态组的拷贝
         var rules = ["a", "b", "c"];
         var rules_len = rules.length;
+        var start_arr = []; //需要补全的起始数据
+        var tail_arr = [];  //需要补全的末尾数据
+        var start_st = [];
+
+        // 检查起始项的内容是否符合规则
+        if(array[0] !== rules[0]) {
+            //需要补全起始的数据
+            for(var x=0,len = rules.length; x<len; x++) {
+                if(array[0] == rules[x]) {
+                    break;
+                } else {
+                    start_arr.push(rules[x]);
+                    start_st.push(x);
+                }
+            }
+        }
+        console.log(array);
 
         // copy数据，转化状态
         for (var i=0, len_a = array.length; i<len_a; i++) {
@@ -35,8 +51,9 @@
         }
         console.log(status);
 
+
         // 转换状态组 做判断
-        for(var j=1, count; j<status.length; ){
+        for (var j = 1, count; j < status.length; ){
             // 如果(pre+1)%rules_len 和当前项相同，则顺利迭代，不需要处理
             if(  (status[j-1]+1)%rules_len === status[j]  ){
                 j++;
@@ -52,30 +69,39 @@
                 status.splice(j, 0, (status[j-1]+1)%rules_len );
 
                 // 修补原array中的数据
-                array_copy.splice(j, 0, rules[j%rules_len]);
+                array_copy.splice(j, 0, rules[(status[j-1]+1)%rules_len]);
             }
 
         }
+        console.log(status);
+
 
         // 检查是否需要补全尾号数据
         if(status.length%rules_len !== 0) {
 
-            var add_tail = rules_len - status.length%rules_len;     //需要添加的tail数据
+            //需要补全末尾的数据
+            for(var y = rules.length-1; y>=0; y--) {
+                if(status[status.length-1] == y) {
+                    break;
+                } else {
+                    tail_arr.push(rules[y]);
+                }
+            }
 
-            for(var k = add_tail; k>0; k--) {   //修补最后的tail数据
+            //修正status的个数
+            for(var k = y; k> 0; k--) {
                 status.push(rules_len-k);
-
-                // 修补原array中的数据
-                array_copy.push(rules[rules_len-k]);
             }
         }
 
-        console.log(status);
-        console.log(array);
+        console.log(start_st.concat(status));
+        console.log(start_arr);
         console.log(array_copy);
-        return  array_copy;
+        console.log(tail_arr.reverse());
+        return  start_arr.concat(array_copy).concat(tail_arr.reverse());
     }
-    changeState(array);
+    var res = changeState(array);
+    console.log(res);
 </script>
 </body>
 </html>
