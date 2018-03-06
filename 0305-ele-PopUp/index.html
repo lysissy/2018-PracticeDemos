@@ -2,9 +2,148 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>ele-食项全能</title>
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="apple-mobile-web-app-title" title="饿了么">
+    <meta name="apple-touch-startup-image" href="image/startup.png">
+    <script src="index.js" defer></script>
+    <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-$END$
+
+    <!-- 所有svg图像 -->
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+        <defs>
+            <symbol viewBox="0 0 70 70" id="close"><style>#close .st0{opacity:.502;stroke:#fff;stroke-width:2;enable-background:new}#close .st1{fill:#fff}</style><path d="M35 5c16.6 0 30 13.4 30 30S51.6 65 35 65 5 51.6 5 35 18.4 5 35 5z" class="st0"></path><path d="M47.9 47.9c-1 1-2.6 1-3.5 0L23.1 26.7c-1-1-.9-2.6.1-3.5 1-.9 2.5-.9 3.5 0l21.2 21.2c1 .9 1 2.5 0 3.5z" class="st1"></path><path d="M47.2 26L26 47.2c-1 1-2.6.9-3.5-.1-.9-1-.9-2.5 0-3.5l21.2-21.2c1-1 2.6-.9 3.5.1.9 1 .9 2.5 0 3.5z" class="st1"></path></symbol>
+            <symbol viewBox="0 0 54 54" id="money"><path fill="#FEA92C" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M28.5 50.5c-12.15 0-22-9.85-22-22s9.85-22 22-22 22 9.85 22 22-9.85 22-22 22zm.415-31.554l-9.139 9.139 9.139 9.138 9.139-9.138-9.139-9.139z"></path><path fill="none" d="M1.5.5h54v54h-54V.5z"></path></symbol>
+            <symbol viewBox="0 0 54 54" id="redbag"><path fill="#FF400D" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M12 6.5h29a4 4 0 0 1 4 4v37a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4v-37a4 4 0 0 1 4-4z"></path><path fill="#E54A39" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M45 15.81V9.604C45 7.89 43.648 6.5 41.98 6.5H11.02C9.352 6.5 8 7.89 8 9.604v6.206s6.01 7.759 18.122 7.759C38.235 23.569 45 17.524 45 15.81z"></path><path fill="#FEA92C" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M26.5 15.031c3.97 0 7.187 3.302 7.187 7.375s-3.217 7.375-7.187 7.375-7.188-3.302-7.188-7.375 3.218-7.375 7.188-7.375z"></path><path fill="none" d="M0 .5h54v54H0V.5z"></path></symbol>
+            <symbol viewBox="0 0 54 54" id="cracker"><path fill="#FBCA20" stroke="#000" stroke-width="3" d="M8.7 12.4c0-2.2 8.2-4 18.3-4s18.3 1.8 18.3 4l-1.6 12.7H11L8.7 12.4z"></path><path fill="#D80515" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M8.7 12.4s4.7 3.2 17.9 3.2c15.4 0 18.7-3.2 18.7-3.2l-.8 34s-1.8 5.5-17.9 5.5c-15.3 0-17.1-5.5-17.1-5.5l-.8-34z"></path><path fill="#FEA92C" d="M11 15.6s2.4 3.2 15.6 3.2 15.6-2.4 15.6-2.4V18s-2.8 3.2-15.6 3.2c-10.9 0-14.8-3.2-14.8-3.2l-.8-2.4zm.8 26.9s1.6 4 14.8 4 15.6-3.2 15.6-3.2v1.6s-2.8 3.2-15.6 3.2c-10.9 0-14.8-4-14.8-4v-1.6z"></path><path fill="#FBCA20" stroke="#000" stroke-width="3" d="M25.8 13.2s.3-8.6 3.9-12.2"></path><path fill="none" d="M1 1h52v52H1V1z"></path></symbol>
+            <symbol viewBox="0 0 20 20" id="arrow"><path fill="#FFF" fill-rule="evenodd" d="M16.004 10.233L6.958 19l-.96-.93 8.343-8.085-8.315-8.057.955-.925 8.995 8.717-.251.243.279.27z"></path><path fill="none" d="M0 0h20v20H0V0z"></path></symbol>
+            <symbol viewBox="0 0 52 52" id="share"><path fill="#FFF" fill-rule="evenodd" d="M42.354 23.804l-2.595-1.646 5.804-9.199c-7.699 1.797-13.315 5.16-16.7 10.004-2.405 3.439-3.257 7.154-3.548 9.665-.312 2.697-.071 4.64-.043 4.853l.062.493-3.072.039-.067-.361c-.015-.083-1.381-8.51 4.129-16.423 3.864-5.547 10.17-9.351 18.755-11.317L34.613 4.235l1.463-2.707 15.151 8.217-8.873 14.059zM4.781 14.201v30.11c0 .49.439.888.98.888h39.022c.542 0 .984-.398.984-.888V33.509h2.887v10.802c0 2.086-1.736 3.783-3.871 3.783H5.761c-2.133 0-3.868-1.697-3.868-3.783v-30.11c0-2.086 1.735-3.782 3.868-3.782h9.603v2.894H5.761c-.54 0-.98.398-.98.888z"></path><path fill="#FFF" fill-opacity="0" fill-rule="evenodd" d="M0 0h52v52H0V0z"></path></symbol>
+            <symbol viewBox="0 0 54 54" id="money"><path fill="#FEA92C" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M28.5 50.5c-12.15 0-22-9.85-22-22s9.85-22 22-22 22 9.85 22 22-9.85 22-22 22zm.415-31.554l-9.139 9.139 9.139 9.138 9.139-9.138-9.139-9.139z"></path><path fill="none" d="M1.5.5h54v54h-54V.5z"></path></symbol>
+            <symbol viewBox="0 0 54 54" id="cracker"><path fill="#FBCA20" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M8 13.389c0-2.27 8.507-4.111 19-4.111s19 1.841 19 4.111v13.156H8V13.389z"></path><path fill="#D80515" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M8 13.389s4.932 3.289 18.596 3.289C42.587 16.678 46 13.389 46 13.389l-.809 35.355S43.274 54.5 26.596 54.5c-15.901 0-17.787-5.756-17.787-5.756L8 13.389z"></path><path fill="#FEA92C" fill-rule="evenodd" d="M10.426 16.678s2.506 3.289 16.17 3.289c13.715 0 16.17-2.467 16.17-2.467v1.645s-2.873 3.351-16.17 3.289c-11.319.02-15.362-3.289-15.362-3.289l-.808-2.467zm.808 27.955s1.698 4.111 15.362 4.111c13.715 0 16.17-3.288 16.17-3.288V47.1s-2.873 3.352-16.17 3.289c-11.319.021-15.362-4.111-15.362-4.111v-1.645z"></path><path fill="#FBCA20" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M25.787 14.211s.269-8.977 4.043-12.622"></path><path fill="none" d="M0 1.5h54v54H0v-54z"></path></symbol>
+            <symbol viewBox="0 0 300 240" id="star"><path fill="#F8CE00" stroke="#F7AE2F" stroke-width="26" d="M157.3 78c51.6-.1 56.5 15 14.7 45.4 16 49.3 3.2 58.6-38.4 28.1C91.8 182 79 172.6 95.1 123.4 53.3 93 58.2 77.9 109.7 78c15.9-49.3 31.7-49.3 47.6 0z" opacity=".4"></path><path fill="#F8CE00" stroke="#F7AE2F" stroke-width="10" d="M157.3 78c51.6-.1 56.5 15 14.7 45.4 16 49.3 3.2 58.6-38.4 28.1C91.8 182 79 172.6 95.1 123.4 53.3 93 58.2 77.9 109.7 78c15.9-49.3 31.7-49.3 47.6 0z"></path><path fill="#FFF" fill-opacity=".502" d="M246.9 100.9c-1.9 10.9-3.8 10.9-5.7 0-10.9-1.9-10.9-3.8 0-5.7 1.9-10.9 3.8-10.9 5.7 0 10.8 1.8 10.8 3.7 0 5.7z"></path><path fill="#FFF" fill-opacity=".702" d="M37 57c-1.7 9.3-3.3 9.3-4.9 0-9.3-1.7-9.3-3.3 0-4.9 1.6-9.3 3.3-9.3 4.9 0 9.3 1.6 9.3 3.2 0 4.9z"></path><path fill="#FFF" fill-opacity=".902" d="M199.2 34.2c-1.1 6.4-2.3 6.4-3.4 0-6.4-1.1-6.4-2.3 0-3.4 1.1-6.4 2.3-6.4 3.4 0 6.4 1.1 6.4 2.3 0 3.4z"></path><path fill="none" d="M0 13h270v144H0V13z"></path></symbol>
+        </defs>
+    </svg>
+
+    <!-- 网页内容 -->
+    <div class="app">
+       <div class="home-wrap">
+           <section class="home">
+               <header>
+                    <div class="header-wrapper">
+                        <div class="header-left"></div>
+                        <div class="header-center">
+                            <img src="image/solgan.png" alt="solgan">
+                        </div>
+                        <div class="header-right"></div><!-- 放置分享按钮 -->
+                    </div>
+               </header>
+               <div class="rewards">
+                   <div class="left">
+                       <div class="icon-wrap">
+                           <svg class="icon">
+                               <use data-v-4af0b2e5="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#money"><svg viewBox="0 0 54 54" id="money" width="100%" height="100%"><path fill="#FEA92C" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M28.5 50.5c-12.15 0-22-9.85-22-22s9.85-22 22-22 22 9.85 22 22-9.85 22-22 22zm.415-31.554l-9.139 9.139 9.139 9.138 9.139-9.138-9.139-9.139z"></path><path fill="none" d="M1.5.5h54v54h-54V.5z"></path></svg></use>
+                           </svg>
+                           <span class="amount">66元</span>
+                       </div>
+                       <div class="icon-wrap redbag">
+                           <svg class="icon">
+                               <use data-v-4af0b2e5="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#redbag">
+                                   <svg viewBox="0 0 54 54" id="redbag" width="100%" height="100%"><path fill="#FF400D" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M12 6.5h29a4 4 0 0 1 4 4v37a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4v-37a4 4 0 0 1 4-4z"></path><path fill="#E54A39" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M45 15.81V9.604C45 7.89 43.648 6.5 41.98 6.5H11.02C9.352 6.5 8 7.89 8 9.604v6.206s6.01 7.759 18.122 7.759C38.235 23.569 45 17.524 45 15.81z"></path><path fill="#FEA92C" fill-rule="evenodd" stroke="#000" stroke-width="3" d="M26.5 15.031c3.97 0 7.187 3.302 7.187 7.375s-3.217 7.375-7.187 7.375-7.188-3.302-7.188-7.375 3.218-7.375 7.188-7.375z"></path><path fill="none" d="M0 .5h54v54H0V.5z"></path></svg>
+                               </use>
+                           </svg>
+                           <span class="amount">查看</span>
+                       </div>
+                   </div>
+                   <div class="right">
+                       <div class="icon-wrap">
+                           <svg class="icon"><use data-v-4af0b2e5="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#cracker"></use></svg>
+                           <span class="amount">9个</span>
+                           <div class="add-icon"></div>
+                       </div>
+                   </div>
+               </div>
+               <main>
+                   
+               </main>
+
+               <!-- 登陆App 弹窗部分 -->
+               <div class="tip hide">
+                   <div class="content">
+                       <div class="close top">
+                           <svg viewBox="0 0 70 70" id="close" width="100%" height="100%"><path d="M35 5c16.6 0 30 13.4 30 30S51.6 65 35 65 5 51.6 5 35 18.4 5 35 5z" class="st0"></path><path d="M47.9 47.9c-1 1-2.6 1-3.5 0L23.1 26.7c-1-1-.9-2.6.1-3.5 1-.9 2.5-.9 3.5 0l21.2 21.2c1 .9 1 2.5 0 3.5z" class="st1"></path><path d="M47.2 26L26 47.2c-1 1-2.6.9-3.5-.1-.9-1-.9-2.5 0-3.5l21.2-21.2c1-1 2.6-.9 3.5.1.9 1 .9 2.5 0 3.5z" class="st1"></path></svg>
+                       </div>
+                       <div class="content">
+                           <div class="logo"><img src="image/logo.png" alt="logo"></div>
+                           <div class="gift-content">
+                               <dv class="ka-wrap">
+                                    <div class="info">
+                                        <h4>油焖大虾</h4>
+                                        <div class="help">助你赶年兽</div>
+                                        <div class="tip">登陆App额外赠送3个炮竹</div>
+                                    </div>
+                                   <div class="gifts-wrap">
+                                       <ul class="gifts">
+                                           <li class="gift">
+                                               <div class="reward">
+                                                   <img src="image/crop.png"  class="icon" alt="crop">
+                                                   <span class="name">爆竹</span>
+                                                   <span class="num">+3</span>
+                                               </div>
+                                           </li>
+                                       </ul>
+                                   </div>
+                               </dv>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <!-- 游戏规则 弹窗部分 -->
+               <div class="tip hide">
+                   <div class="content">
+                       <div class="close top">
+                           <svg viewBox="0 0 70 70" id="close" width="100%" height="100%"><path d="M35 5c16.6 0 30 13.4 30 30S51.6 65 35 65 5 51.6 5 35 18.4 5 35 5z" class="st0"></path><path d="M47.9 47.9c-1 1-2.6 1-3.5 0L23.1 26.7c-1-1-.9-2.6.1-3.5 1-.9 2.5-.9 3.5 0l21.2 21.2c1 .9 1 2.5 0 3.5z" class="st1"></path><path d="M47.2 26L26 47.2c-1 1-2.6.9-3.5-.1-.9-1-.9-2.5 0-3.5l21.2-21.2c1-1 2.6-.9 3.5.1.9 1 .9 2.5 0 3.5z" class="st1"></path></svg>
+                       </div>
+                       <div class="rule">
+                           <img src="image/rules.png" alt="rule">
+                           <div class="detail-wrap">
+                               <ul class="detail">
+                                   <li class="detail">
+                                       <p>1. 游戏每局两人匹配对战，双方回答同样的五道问题，每道题10秒钟作答时间，按照正确度和回答时间获得积分，每局结束获得积分多的用户获胜。</p>
+                                   </li>
+                                   <li>
+                                       <p>2. 积分规则：回答剩余时间×10为每道题得分，App内答题额外获得10%积分。</p>
+                                   </li>
+                                   <li>
+                                       <p>3. 游戏每局消耗1个爆竹，每天登陆会获得一定数量的爆竹，或在每局挑战胜利后随机掉落，也可以通过好友助力形式获得爆竹。</p>
+                                   </li>
+                                   <li>
+                                       <p>4. 游戏有两种主要玩法，限时战和集卡战。限时战：限时每天的10点和16点开启，限时战有大概率得到店铺霸王餐券。</p>
+                                   </li>
+                                   <li>
+                                       <p>5. 集卡战：每关开放时间不同，每次挑战胜利后有几率获得生肖卡牌，获取12张生肖卡牌后可以进行年兽挑战，赢取终极大奖。</p>
+                                   </li>
+                                   <li>
+                                       <p>6. 每局游戏胜利都有机会获得爆竹、生肖卡、年终奖、超级会员、霸王餐、平台红包、兑换码等奖品。</p>
+                                   </li>
+                                   <li>
+                                       <p>7.年终奖可点击铜钱图标跳转链接使用。</p>
+                                   </li>
+                                   <li>
+                                       <p>8.超级会员领取后，本账户生效，权益以页面内显示为准。</p>
+                                   </li>
+                                   <li>
+                                       <p>9.饿了么保留在法律允许范围内的解释权。</p>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </section>
+       </div>
+    </div>
 </body>
 </html>
