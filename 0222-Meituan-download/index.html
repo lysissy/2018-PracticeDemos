@@ -4,12 +4,74 @@
     <meta charset="UTF-8">
     <title>download</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, max-scale=1.0, user-scalable=no ">
-    <meta name="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="email=no, telephone=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mibile-web-app-status-bar-style" content="black">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <script>
+        !function (e) {
+            "use strict";
+            var t = document.documentElement, i = Math.min(Math.floor(window.devicePixelRatio), 3), n = 1 / i,
+                o = document.querySelector('meta[name="viewport"]'),
+                a = "initial-scale=" + n + ",maximum-scale=" + n + ",minimum-scale=" + n + ",user-scalable=no,width=device-width,viewport-fit=cover";
+            if (o) o.setAttribute("content", a); else {
+                var r = '<meta name="viewport" content="' + a + '"/>';
+                document.write(r)
+            }
+            var c = function () {
+                var e = t.clientWidth;
+                e / i > 450 && (e = 450 * i);
+                var n = e / 750 * 100;
+                t.style.fontSize = n + "px", window.ratio = e / 750
+            };
+            c(), window.addEventListener("resize", c)
+        }()
+    </script>
+    <link rel="stylesheet" href="../public/normalize.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div id="app">
 
+    <!-- 加载出错页面 -->
+    <a class="retry hide" id="retry-page">
+        <div class="img"></div>
+        <p>加载出错..点击重试</p>
+    </a>
+
+    <!-- 加载loading页面 -->
+    <div class="loading hide" id="loading-mask"></div>
+
+    <!-- 主体内容 -->
+    <div id="app">
+        <div class="guide-download">
+            <div class="footer">
+                <a href="javascript:;" class="download-btn">
+                    立刻下载
+                    <div class="shadow"></div>
+                    <!-- 仅仅隐形的话，可考虑用box-shadow实现 -->
+                </a>
+                <ul class="footer-list">
+                    <li>
+                        <span class="icon icon-package"></span>
+                        <span class="desc">海量优惠红包</span>
+                    </li>
+                    <li>
+                        <span class="icon icon-travel"></span>
+                        <span class="desc">热辣旅游信息</span>
+                    </li>
+                    <li>
+                        <span class="icon icon-goods"></span>
+                        <span class="desc">丰富品质好货</span>
+                    </li>
+                    <li>
+                        <span class="icon icon-experience"></span>
+                        <span class="desc">精彩达人体验</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
