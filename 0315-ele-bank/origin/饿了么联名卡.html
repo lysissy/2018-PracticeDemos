@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://h5.ele.me/creditcard/#from=discover -->
+<html lang="zh-cmn-Hans" data-dpr="2" style="font-size: 75px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="manifest" href="https://h5.ele.me/manifest.json">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <meta name="description"
+          content="饿了么是中国专业的网上订餐平台，目前已覆盖北京、上海、杭州、广州等300多个城市，提供各类中式、日式、韩式、西式、下午茶、夜宵等优质美食，并提供送餐上门服务，让订餐更加轻松，叫外卖就上饿了么！">
+    <meta name="keywords" content="饿了么，网上订餐，外卖，快餐外卖，外卖网">
+    <meta name="apple-mobile-web-app-title" content="饿了么">
+    <meta name="theme-color" content="#0096ff">
+    <link rel="apple-touch-startup-image" href="https://h5.ele.me/startup.png">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="Alipay:title" content="饿了么外卖">
+    <meta name="Alipay:imgUrl" content="https://h5.ele.me/logo-96x96.png">
+    <meta name="Alipay:desc" content="用饿了么点外卖：美好生活，触手可得。">
+    <link rel="dns-prefetch" href="https://fuss10.elemecdn.com/">
+    <link rel="dns-prefetch" href="https://shadow.elemecdn.com/">
+    <link rel="dns-prefetch" href="https://crayfish.elemecdn.com/">
+    <link rel="preconnect" href="https://fuss10.elemecdn.com/">
+    <link rel="preconnect" href="https://shadow.elemecdn.com/">
+    <link rel="preload" href="https://shadow.elemecdn.com/crayfish/ubt.js/config">
+    <title>饿了么联名卡</title>
+    <script defer="">!function (e, t) {
+        function i() {
+            var t = n.getBoundingClientRect().width / 10;
+            n.style.fontSize = t + "px", p.rem = e.rem = t
+        }
+
+        var a, r = e.document, n = r.documentElement, o = r.querySelector('meta[name="viewport"]'),
+            l = r.querySelector('meta[name="flexible"]'), m = r.querySelector('meta[name="flexible-in-x5"]'), s = !0,
+            d = 0, c = 0, p = t.flexible || (t.flexible = {});
+        if (o) {
+            console.warn("将根据已有的meta标签来设置缩放比例");
+            var u = o.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
+            u && (c = parseFloat(u[1]), d = parseInt(1 / c))
+        } else if (l) {
+            var f = l.getAttribute("content");
+            if (f) {
+                var h = f.match(/initial\-dpr=([\d\.]+)/), v = f.match(/maximum\-dpr=([\d\.]+)/);
+                h && (d = parseFloat(h[1]), c = parseFloat((1 / d).toFixed(2))), v && (d = parseFloat(v[1]), c = parseFloat((1 / d).toFixed(2)))
+            }
+        }
+        if (m && (s = "false" !== m.getAttribute("content")), !d && !c) {
+            var x = (e.navigator.appVersion.match(/android/gi), e.chrome), g = e.navigator.appVersion.match(/iphone/gi),
+                b = e.devicePixelRatio, w = /TBS\/\d+/.test(e.navigator.userAgent), y = !1;
+            try {
+                y = "true" === localStorage.getItem("IN_FLEXIBLE_WHITE_LIST")
+            } catch (e) {
+                y = !1
+            }
+            c = 1 / (d = g || x || w && s && y ? b >= 3 && (!d || d >= 3) ? 3 : b >= 2 && (!d || d >= 2) ? 2 : 1 : 1)
+        }
+        if (n.setAttribute("data-dpr", d), !o) if ((o = r.createElement("meta")).setAttribute("name", "viewport"), o.setAttribute("content", "initial-scale=" + c + ", maximum-scale=" + c + ", minimum-scale=" + c + ", user-scalable=no"), n.firstElementChild) n.firstElementChild.appendChild(o); else {
+            var E = r.createElement("div");
+            E.appendChild(o), r.write(E.innerHTML)
+        }
+        e.addEventListener("resize", function () {
+            clearTimeout(a), a = setTimeout(i, 300)
+        }, !1), e.addEventListener("pageshow", function (e) {
+            e.persisted && (clearTimeout(a), a = setTimeout(i, 300))
+        }, !1), "complete" === r.readyState ? r.body.style.fontSize = 12 * d + "px" : r.addEventListener("DOMContentLoaded", function (e) {
+            r.body.style.fontSize = 12 * d + "px"
+        }, !1), i(), p.dpr = e.dpr = d, p.refreshRem = i, p.rem2px = function (e) {
+            var t = parseFloat(e) * this.rem;
+            return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+        }, p.px2rem = function (e) {
+            var t = parseFloat(e) / this.rem;
+            return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+        }
+    }(window, window.lib || (window.lib = {}))</script>
+    <meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">
+    <link href="./饿了么联名卡_files/vendor.201b376.css" rel="stylesheet">
+    <link href="./饿了么联名卡_files/creditcard.4700c1b.css" rel="stylesheet">
+</head>
+<body ontouchstart="" style="font-size: 24px;">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     style="position:absolute;width:0;height:0">
+    <defs>
+        <symbol viewBox="0 0 60 60" id="close.22a2874">
+            <g fill="none" fill-rule="evenodd" opacity=".8" transform="translate(3 3)">
+                <path fill="#FFF"
+                      d="M27 25.384l9.697-9.698a1.143 1.143 0 1 1 1.617 1.617L28.616 27l9.698 9.697a1.143 1.143 0 1 1-1.617 1.617L27 28.616l-9.697 9.698a1.143 1.143 0 1 1-1.617-1.617L25.384 27l-9.698-9.697a1.143 1.143 0 1 1 1.617-1.617L27 25.384z"></path>
+                <circle cx="27" cy="27" r="26.5" stroke="#FFF"></circle>
+            </g>
+        </symbol>
+    </defs>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     style="position:absolute;width:0;height:0">
+    <defs>
+        <symbol viewBox="0 0 8 16" id="arrow">
+            <path fill="#999" fill-rule="evenodd"
+                  d="M8 8a.76.76 0 0 0-.195-.514L1.138.213a.628.628 0 0 0-.943 0 .775.775 0 0 0 0 1.029L6.391 8 .195 14.758a.775.775 0 0 0 0 1.029c.26.284.683.284.943 0l6.667-7.273A.76.76 0 0 0 8 8z"></path>
+        </symbol>
+        <symbol viewBox="0 0 26 28" id="share">
+            <path fill="#333"
+                  d="M19.77 7.072c-3.392-.002-6.143 2.609-6.143 5.828v7.921c0 .651-.556 1.179-1.242 1.179-.686 0-1.242-.528-1.242-1.179V12.9c0-4.521 3.864-8.187 8.627-8.185h1.99l-2.847-2.703a1.137 1.137 0 0 1 0-1.667 1.29 1.29 0 0 1 1.756 0l4.967 4.714c.485.46.485 1.207 0 1.667L20.67 11.44a1.29 1.29 0 0 1-1.756 0 1.137 1.137 0 0 1 0-1.666l2.846-2.702h-1.99zM23.563 25.7V14.583c0-.635.545-1.15 1.218-1.15.673 0 1.219.515 1.219 1.15V26.85c0 .635-.546 1.15-1.219 1.15H9.344C4.184 28 0 24.053 0 19.183V6.15C0 5.515.546 5 1.219 5h8.564c.673 0 1.22.515 1.22 1.15 0 .635-.547 1.15-1.22 1.15H2.438v11.883c0 3.6 3.091 6.517 6.906 6.517h14.219z"></path>
+        </symbol>
+    </defs>
+</svg>
+<div class="app-1NtF-">
+    <div class="card-19PSa">
+        <div class="card-3qN22"><img src="./饿了么联名卡_files/52fb2f8a63f013518896914c55508png.png" class="card-LwE4v">✕
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF8AAAAYCAMAAACrz9ETAAAAllBMVEUAAAAqju0pjOssju0qjuoojOoojespjesojespjespjespj+wojOstkO4pjeoojOspjusqju0tkvIojeoojesojespjOspju0oju0ojespjuspjuoqjuwtkfAojOspjesojuspjuwojOspjewxm/oojespjewojesrj+41oP8ojesqj+wpjuopje0pjewpjusojesojOsVzoYjAAAAMXRSTlMAYfsdh9KwidC0oTzjGfTnciYT99apeVFG7FhWQiDKjn5c3GcLwm3wLQacNGNEgUy49TZsEwAAAsVJREFUSMetltl2ozAMhg0J2cAsYWuAkED2pYve/+VGEibG7eT0ZM78N1iu+CwpkqlQWodfre8nk/tSDBWAR48dkOL10oermJ12YgMD2aStYC2vk4nLQNeV4kG/2qAUb4Yn4EYY5mILrPMIYIJntmIB37Vi/8sBVxEuSgQuekruw0CBa/BRxzzx8L1aMj91UlHVTq8kSeh1h9zpXLvC5y0GaPtAQ4Yki3GWepxvafA5kDeAsRDM/yEZAJwiWmXofBfoF6g0SDkhDm+d8dlSjW5CKNOyst/4lxpDelck8hJ7R6VBkpTdVnunaHp7Zd2KSiBfFmMkF8URoC6KwjX49Fvs2DlWx895R+mKxof2Xs+44sqagU38LRjyBEtXdyNUUWoKbMM7StLGXe199Lla8sGHX/iVTUGronhSNfNcsJRV9UZ0ANSJctP844cbZQs8NMumAEmWZeUg3RXAbK+K4p/x+Y4HOrzDmg/CCWOgs0fC4KOe/74bDloV5ZNCPAEEA0ICkArWueY5aYR4gY/h3fvWCWl+W4DYFVo+vUiqOPiUg1mWL/CZtsxzV80vFEMHTGf66KMg52WxAsvgH21AxXLU3TaOyTd7lZtRq+3rUwIsuolu0Kk1+Kp/IuJTGM/4GSia4aDct299T/i4Z/ALvn+cJfJ9vG/mT/gl4uuLyT/iHoHNvbh8sf79/HpykE1w2Iu1ni+tLBKv80cBT4DWgifrqqbZ1Ov8vcMTYPLfqdrmAfIf+XM1ASa/v59rWpGRwNfF4G93OJRhynwJ4IVh2FWvHKNWPX+KEH9qyFM3TwYkL51u0hWtdpqfclt2/WnxtJAcLnf/9e2a2oO/SXaRxMb38ab559WDf6C07jaHwn+ila7J5Cdcj9paf6/9sf6+89xbBdalaarOjhrLsrp12aDKvtP2ufVdDTeT/v8kPrXpHen/U38Aeo6R/6LIOIUAAAAASUVORK5CYII="
+                 class="card-2btXw"><span>联名信用卡</span></div>
+        <h1 class="card-3J5-f">尊享饿了么会员·红包超值优惠</h1>
+        <p class="card-UpCLW">[首刷礼] 送1个月饿了么超级会员</p>
+        <p class="card-UpCLW">[首刷礼] 专享50元饿了么无门槛红包</p>
+        <p class="card-UpCLW">[月月享] 连享5个月饿了么消费返无门槛红包</p><span class="card-36w3K">
+    查看具体权益规则
+    <svg><use xlink:href="#arrow"></use></svg></span>
+        <div class="card-1fStW">
+            <div class="card-2_0Lj">
+                <button ubt-click="100796" ubt-data-from="discover" class="card-2k30x">立即办卡</button><!----></div>
+            <div class="cover-14yuQ">
+                <div>
+                    <div class="cover-1OCh_" style=""><img src="./饿了么联名卡_files/74119c1a07ea9759db48f61f0387cpng.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="cover-1OCh_" style="display: none;"><img
+                            src="./饿了么联名卡_files/d4922ea6ac8bbaf92aac40223101bpng.png"></div>
+                </div>
+                <div>
+                    <div class="cover-1OCh_" style="display: none;"><img
+                            src="./饿了么联名卡_files/cffb89524f247ed59d6f0b0666a82png.png"></div>
+                </div>
+                <div>
+                    <div class="cover-1OCh_" style="display: none;"><img
+                            src="./饿了么联名卡_files/45deb8eb08b8777251bb5387ff0dcpng.png"></div>
+                </div>
+                <div class="cover-24ieD">
+                    可选卡面款式<br>
+                    <ul class="cover-1fyrV">
+                        <li class="cover-1P4CA"><img src="./饿了么联名卡_files/c181ceae5d422b0b9cf4fdf1f14b1png.png"><br>标准
+                        </li>
+                        <li class=""><img src="./饿了么联名卡_files/5f4eba21508a30c62423c5c25daa6png.png"><br>抹茶
+                        </li>
+                        <li class=""><img src="./饿了么联名卡_files/a80e065b92bec98a9fb39ae3ebd72png.png"><br>海盐
+                        </li>
+                        <li class=""><img src="./饿了么联名卡_files/93d1a0cf069ad1bed18d8f26edd01png.png"><br>三色
+                        </li>
+                        <p class="cover-3lMA3" style="visibility: visible; transform: translate3d(0px, 0px, 0px);"></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Popup-mask_2vJ_ko7"
+             style="background: rgba(0, 0, 0, 0.7);transition-duration: 0.2s;align-items: center;z-index: 7777;display: none;">
+            <div class="Popup-wrapper_2IImAZj Popup-center-wrapper_29jr-9C" style="transition-duration: 0.2s;"><!---->
+                <div class="card-22zZZ"><p class="card-qHiU0">权益细则</p>
+                    <div class="card-2aA6v">
+                        <div class="card-1Yg_H"><h3>饿了么联名卡新客户首刷活动：</h3> （一）活动时间: 2017年9月15日-2018年9月14日<br> （二）活动内容<br>
+                            1、线上新户首刷活动<br> ［首刷礼］送1个月饿了么超级会员<br> ［首刷礼］专享50元饿了么无门槛红包<br>
+                            活动内容：线上渠道进件并符合本行信用卡新客户条件的持卡人，在成功核发饿了么卡的60日内（含核卡日），完成1笔限定交易且金额大于15元（含），即可获赠饿了么联名会员定制服务（包含1个月饿了么超级会员权益及5个价值10元的饿了么联名会员专享红包）。<br>
+                            **新客户定义：<br>
+                            （1）首次成功申请兴业银行信用卡主卡的持卡人或客户名下所有卡片在2016年1月1日（不含）前均已注销且于活动期间进件并再次成功申请兴业银行信用卡主卡的持卡人，仅有附属卡的持卡人另行申办主卡仍可参加本活动。<br>
+                            （2）新户同日核发不同卡种且同时核发了饿了么联名信用卡的视同为新户。<br>
+                            （3）申请时间以申请表的进件日期为准，即到达总行信用卡中心（压码）的日期为准，通过网络快发渠道进件的客户，以申请人在线申请提交成功时间为准；核卡日是指客户收到的寄卡函上标明的发卡日期，网络快发渠道进件的客户核卡日以客户至我行网点核访时间为准。<br>
+                            （三）新户首刷活动细则：<br> 1、本活动仅限活动期间内申请兴业银行饿了么联名信用卡主卡的新客户参与，且要求客户账户状态需为正常。<br>
+                            2、限定交易包括：计积分商户刷卡消费（包括但不限于云闪付、ApplePay等移动支付交易）、预借现金（不含溢缴款取现）、分期付款、代扣业务以及网上支付交易（包括但不限于信用卡快捷支付）。电子现金账户交易、不计积分商户刷卡消费、福建烟草代扣业务不参加本活动。各种费用、利息不含在内。各类交易认定及入账金额以兴业银行系统跑批数据为准。<br>
+                            3、饿了么联名卡附属卡交易合并计入主卡账户，同一持卡人名下多张饿了么联名卡主卡交易合并计算。交易统计日期以本行信用卡系统记录的实际交易发生时间为准，预授权交易以预授权发生时间为准，分期付款交易以授权核准日为准。<br>
+                            4、本活动为兴业银行饿了么联名信用卡主卡专属迎新活动，无论是否满足本活动参与条件，持卡人均不能同时共享我行同期开展的其他迎新活动。如持卡人同天核发饿了么联名信用卡主卡及其他参加我行新户首刷活动的卡种，优先参加饿了么联名信用卡的活动。<br>
+                            <h3>饿了么联名卡新客户网上支付专享活动：</h3> （一）活动时间<br> 1、申请时间：2017年9月15日-2017年12月31日；<br>
+                            2、活动时间：2017年9月15日-2018年5月31日。最后一批红包发放截止日为6月30日。<br> （二）活动对象<br>
+                            兴业银行饿了么联名卡主卡新客户（即首次成为兴业银行信用卡持卡客户，且为2017年12月31日前申请饿了么联名信用卡并成功核卡的客户）<br>
+                            （三）活动内容：［月月享］连享5个月饿了么消费无门槛红包<br>
+                            饿了么联名卡主卡新客户首笔交易当月（首笔交易须于核卡次月底前完成）算起的5个月内，每月使用饿了么联名卡在饿了么APP有1笔15元（含）以上的交易，即可于次月获赠10元饿了么联名客户专享红包（以红包兑换码的形式通过短信发送），该红包每位客户每月仅可获赠一次，活动期间最多可获赠5次。<br>
+                            （四）新客户网上支付专享活动细则<br> 1、活动仅限主卡持卡人参与（且仅限新客户），附属卡交易计入主卡。<br>
+                            2、本活动中达标交易仅限使用饿了么联名信用卡在饿了么APP上发生的交易。<br>
+                            3、活动期间，每位达标主卡客户最多可享受5次价值10元的饿了么专享红包返还，累计返还金额不超过50元，每月可获得1次返还机会。<br>
+                            4、该笔交易与新客户首刷达标活动交易互排。<br>
+                            <h3>通用活动细则：</h3>
+                            （一）要求在参加本次活动期间以及兴业银行信用卡中心对符合赠送服务条件的持卡人进行数据提取时，持卡人卡片账户状态需为正常。因卡片受到管制等原因而不能用卡或未激活、卡片逾期等账户状态不正常的持卡人不能参与本次活动。<br>
+                            （二）超级会员及专享红包兑换码将以短信形式发送给达标客户，新户首刷权益所涉及的超级会员及红包兑换码将于持卡人满足条件后的10个工作日内，发送至持卡人在兴业银行信用卡系统内预留的手机号码中。<br>
+                            （三）持卡人获赠的超级会员及专享红包兑换码需在收到兑换码后的15天内至饿了么APP兑换使用；超级会员兑换码自兑换成功之日起的一个月内有效；红包自兑换成功之日起的90天（含）内有效。持卡人在饿了么APP相关页面输入兑换码即可完成兑换。如持卡人未在有效期内兑换使用，则视为其自动放弃该奖励。<br>
+                            （四）活动期间，如持卡人手机号码发生变更，应及时致电兴业银行更改，兴业银行将以提取活动数据时持卡人在兴业银行系统中预留的手机号码为准。若因持卡人手机号码变更等问题导致兑换码未收到或延迟收到，责任由持卡人自行承担。<br>
+                            （五）若持卡人获赠奖励后，6个月内申请销户，或因其他持卡人自身原因不再符合活动条件，本行有权从持卡人的本行信用卡账户中自动扣除所赠服务、权益、礼品的等值金额。
+                            （六）如参与活动的持卡人存在任何利用虚假交易、系统漏洞等手段恶意套取优惠的行为，我行保留取消该类持卡人领取奖励资格的权利。<br>
+                            （七）活动奖励由拉扎斯网络科技（上海）有限公司提供，兴业银行和拉扎斯网络科技（上海）在法律许可范围内保留更换同等价值奖励种类的权利和本次活动的解释权。<br>
+                            （八）兴业银行有权在中国法律法规允许的范围内修改本活动条款及细则（包括但不限于延迟或终止本活动等），并于兴业银行信用卡中心网站或其他渠道公布后生效。<br>
+                            <h3>饿了么联名会员定制服务兑换规则：</h3> 1、饿了么超级会员的兑换码激活流程<br> （1）非超级会员的客户：<br> 打开登录饿了么APP &gt;&gt;&gt;
+                            点击页面右下角「我的」 &gt;&gt;&gt; 点击进入「成为超级会员每月获20元红包」 &gt;&gt;&gt; 点击页面右上角「兑换会员」 &gt;&gt;&gt;
+                            输入本行短信提供的16位超级会员兑换码，即完成一个月饿了么超级会员兑换<br> （2）已是超级会员的客户：<br> 打开登录饿了么APP &gt;&gt;&gt;
+                            点击页面右下角「我的」 &gt;&gt;&gt; 点击进入「超级会员特权」&gt;&gt;&gt; 点击页面右上角「续费管理」 &gt;&gt;&gt;
+                            点击页面最下方「使用兑换码兑换会员」 &gt;&gt;&gt; 输入本行短信提供的16位超级会员兑换码，即完成一个月饿了么超级会员兑换。<br>
+                            2、饿了么联名会员专享红包的兑换码激活流程<br> 打开登录饿了么APP &gt;&gt;&gt; 点击页面右下角「我的」 &gt;&gt;&gt; 点击「优惠」进入「我的优惠」页面
+                            &gt;&gt;&gt; 点击页面右上角「兑换红包」 &gt;&gt;&gt; 输入本行短信提供的12位专享红包兑换码，即可兑换一个10元无门槛红包<br>
+                            3、超级会员兑换后即刻生效，权益有效期为1个月；红包自兑换成功之日起的90天（含）内有效。<br> 4、每个超级会员及专享红包兑换码只能兑换1次，再次使用无效。<br>
+                            5、该超级会员及专享红包兑换码不支持退换，兑换码是否有效以商户核实为准。<br>
+                            6、该超级会员及专享红包兑换码的最终解释权归拉扎斯网络科技（上海）有限公司所有。如在兑换过程中有疑问，请联系饿了么客服： （1）饿了么客服热线：1010-5757；
+                            （2）在线客服：饿了么APP登陆，点击进入「我的」，上划至页面下方，点击进入「服务中心」，点击「在线客服」即可沟通反馈。<br>
+                            特别说明：饿了么超级会员及饿了么联名会员专享红包，仅限在移动端APP使用，超级会员特权以饿了么APP公告为准。<br></div>
+                    </div>
+                    <button>知道了</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-19PSa card-3xrCq">
+        <div class="card-3qN22"><img src="./饿了么联名卡_files/990f0f5058fef14c6699d004f7818png.png" class="card-LwE4v">✕
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF8AAAAYCAMAAACrz9ETAAAAllBMVEUAAAAqju0pjOssju0qjuoojOoojespjesojespjespjespj+wojOstkO4pjeoojOspjusqju0tkvIojeoojesojespjOspju0oju0ojespjuspjuoqjuwtkfAojOspjesojuspjuwojOspjewxm/oojespjewojesrj+41oP8ojesqj+wpjuopje0pjewpjusojesojOsVzoYjAAAAMXRSTlMAYfsdh9KwidC0oTzjGfTnciYT99apeVFG7FhWQiDKjn5c3GcLwm3wLQacNGNEgUy49TZsEwAAAsVJREFUSMetltl2ozAMhg0J2cAsYWuAkED2pYve/+VGEibG7eT0ZM78N1iu+CwpkqlQWodfre8nk/tSDBWAR48dkOL10oermJ12YgMD2aStYC2vk4nLQNeV4kG/2qAUb4Yn4EYY5mILrPMIYIJntmIB37Vi/8sBVxEuSgQuekruw0CBa/BRxzzx8L1aMj91UlHVTq8kSeh1h9zpXLvC5y0GaPtAQ4Yki3GWepxvafA5kDeAsRDM/yEZAJwiWmXofBfoF6g0SDkhDm+d8dlSjW5CKNOyst/4lxpDelck8hJ7R6VBkpTdVnunaHp7Zd2KSiBfFmMkF8URoC6KwjX49Fvs2DlWx895R+mKxof2Xs+44sqagU38LRjyBEtXdyNUUWoKbMM7StLGXe199Lla8sGHX/iVTUGronhSNfNcsJRV9UZ0ANSJctP844cbZQs8NMumAEmWZeUg3RXAbK+K4p/x+Y4HOrzDmg/CCWOgs0fC4KOe/74bDloV5ZNCPAEEA0ICkArWueY5aYR4gY/h3fvWCWl+W4DYFVo+vUiqOPiUg1mWL/CZtsxzV80vFEMHTGf66KMg52WxAsvgH21AxXLU3TaOyTd7lZtRq+3rUwIsuolu0Kk1+Kp/IuJTGM/4GSia4aDct299T/i4Z/ALvn+cJfJ9vG/mT/gl4uuLyT/iHoHNvbh8sf79/HpykE1w2Iu1ni+tLBKv80cBT4DWgifrqqbZ1Ov8vcMTYPLfqdrmAfIf+XM1ASa/v59rWpGRwNfF4G93OJRhynwJ4IVh2FWvHKNWPX+KEH9qyFM3TwYkL51u0hWtdpqfclt2/WnxtJAcLnf/9e2a2oO/SXaRxMb38ab559WDf6C07jaHwn+ila7J5Cdcj9paf6/9sf6+89xbBdalaarOjhrLsrp12aDKvtP2ufVdDTeT/v8kPrXpHen/U38Aeo6R/6LIOIUAAAAASUVORK5CYII="
+                 class="card-2btXw"><span>联名信用卡</span></div>
+        <h1 class="card-3J5-f">办卡领会员，积分双重礼</h1>
+        <p class="card-UpCLW">[首刷礼] 送6个月饿了么超级会员</p>
+        <p class="card-UpCLW">[积分礼] 饿了么消费尊享2倍积分</p><span class="card-36w3K">
+    查看具体权益规则
+    <svg><use xlink:href="#arrow"></use></svg></span>
+        <div class="card-1fStW">
+            <div class="card-2_0Lj">
+                <button ubt-click="100797" ubt-data-from="discover" class="card-2k30x">立即办卡</button><!----></div>
+            <div class="cover-14yuQ cover-sOYvS">
+                <div>
+                    <div class="cover-1OCh_" style=""><img src="./饿了么联名卡_files/df947049f3ded5789c58cbb919c57png.png">
+                    </div>
+                </div>
+                <div class="cover-24ieD">
+                    可选卡面款式<br>
+                    <ul class="cover-1fyrV">
+                        <li class="cover-1P4CA"><img src="./饿了么联名卡_files/302c4e226d59e67a9f00894493f39png.png"><br>标准
+                        </li>
+                        <p class="cover-3lMA3" style="visibility: visible; transform: translate3d(0px, 0px, 0px);"></p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Popup-mask_2vJ_ko7"
+             style="background: rgba(0, 0, 0, 0.7); transition-duration: 0.2s; align-items: center; z-index: 7777; display: none;">
+            <div class="Popup-wrapper_2IImAZj Popup-center-wrapper_29jr-9C" style="transition-duration: 0.2s;"><!---->
+                <div class="card-22zZZ"><p class="card-qHiU0">权益细则</p>
+                    <div class="card-2aA6v">
+                        <div class="card-1Yg_H"><h3>送6个月饿了么超级会员：</h3> 活动时间：即日起至2018年3月31日（含）<br>
+                            活动对象：即日起至2018年3月31日（含）期间，成功申请招商银行饿了么联名信用卡的新户主卡持卡人。<br> 权益细则：<br>
+                            1、即日起至2018年3月31日（含），凡申请并成功核发招商银行饿了么联名信用卡的新户主卡持卡人。<br>
+                            新户定义：首次申请招商银行个人信用卡（含整户注销6个月【含】以上）并成功核发的客户<br>
+                            2、在卡片核发次两个自然月内，使用该卡（含银联e招卡）通过支付宝快捷和微信快捷各有一笔任意金额交易；<br>
+                            或任刷该卡（含银联e招卡）3笔且每笔消费满188元（含支付宝、微信快捷支付）；或任意单笔满500元的分期交易；<br> 或任意一笔招商银行掌上生活绑卡后还款招行信用卡交易；<br>
+                            或任意一笔掌上生活银联扫码支付交易。<br> 即可通过招商银行－掌上生活App领取： 饿了么6个月超级会员权益兑换码<br>
+                            3、兑换码领取路径：客户满足达标条件6个工作日后，即可通过招商银行掌上生活App登记领取礼品，每位达标客户限领1份。兑换码将以短信形式发送至客户。<br>
+                            操作路径：登陆掌上生活APP-&gt;精选-&gt;全部-&gt;信用卡-&gt;活动奖励-&gt;首刷礼或我的-活动奖励-首刷礼<br> 4、领取兑换码后兑换说明：<br>
+                            ①兑换方法：<br> 饿了么超级会员兑换路径：饿了么APP-&gt;“我的”-&gt;超级会员特权-&gt;续费管理-&gt;使用兑换码兑换会员。<br>
+                            非饿了么超级会员兑换路径：饿了么APP-&gt;“我的”-&gt;成为超级会员·每月获20元红包-&gt;申请会员领红包-&gt;使用兑换码兑换会员<br>
+                            ②兑换码兑换截止时间：2018年8月31日 23：59，过时作废且不予换新。会员权益自兑换当日起生效。<br>
+                            <h3>饿了么消费享招行双倍积分：</h3> 活动时间：2017年9月15日—2018年3月31日（含）<br>
+                            活动对象：2017年9月15日—2018年3月31日（含）期间，成功申请招商银行饿了么联名信用卡主卡持卡人（无论新旧户）。<br> 权益细则：<br>
+                            1、2017年9月15日—2018年3月31日（含），招行饿了么联名卡持卡人（无论新旧户），且申请时间为2017年9月15日起至2018年3月31日，申请时间以信用卡中心系统记录的申请资料键档时间为准。<br>
+                            2、使用饿了么联名信用卡，在饿了么APP消费选择支付宝支付，享招行双倍永久积分（一倍原始积分，一倍赠送积分）<br>
+                            3、赠送积分将于消费日后7个工作日内自动给到客户信用卡账户，每月每户额外赠送积分上限为100积分。<br>
+                            4、持卡人以主卡账户参加活动，主附卡合并进行交易统计。交易时间以招行信用卡中心系统记录的交易日为准。<br>
+                            <h3>其他注意事项：</h3>
+                            1.分期交易包括账单分期、现金分期、信用卡商城分期、网上支付分期、商场购物分期、电视购物分期、电话购物分期、汽车分期，以下刷卡交易不记入本次活动统计范围：预借现金手续费及利息、年费、循环信用利息、逾期缴款所衍生的费用（如违约金、利息）、依《招商银行信用卡领用合约》约定的其他各项手续费；取消/退款的交易。<br>
+                            2．持卡人以主卡账户参加活动，主附卡合并进行交易统计。交易时间以招商银行信用卡中心系统记录的刷卡交易日为准，2018年7月31日前尚未请款的交易恕不计入统计。<br>
+                            3.未成功收到礼品的持卡人最晚可于2018年8月31日之前致电4008205555提出异议，未在此期间主动来电提出异议的，则视为持卡人主动放弃所获礼品。<br>
+                            4.如有任何舞弊、欺诈或非真实交易的情形或有下述任一情形：所持信用卡停用或管制、自行注销整户信用卡、对招商银行信用卡中心任何债务不按期偿还的、违反《招商银行信用卡领用合约》、本活动办法或其他相关规定的，持卡人即丧失参加本次活动及兑换礼品的资格，卡中心保留不另行通知而从持卡人信用卡账户直接扣除其奖励礼品价值的金额或采取其它相应法律措施的权利。<br><br>
+                        </div>
+                    </div>
+                    <button>知道了</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./饿了么联名卡_files/hybrid-api.js"></script>
+<script defer="">window.Promise || document.write('<script src="//shadow.elemecdn.com/npm/es6-promise@4.1.1/dist/es6-promise.min.js"><\/script><script>ES6Promise.polyfill()<\/script>'), window.fetch || document.write('<script src="//shadow.elemecdn.com/npm/whatwg-fetch@2.0.3/fetch.min.min.js"><\/script>'), /AlipayClient/i.test(navigator.userAgent) && (document.write('<script src="//a.alipayobjects.com/g/h5-lib/alipayjsapi/3.0.5/alipayjsapi.min.js"><\/script>'), /android/i.test(navigator.userAgent) || document.write('<script src="//as.alipayobjects.com/g/luna-component/luna-fastclick/0.1.0/index.js"><\/script>'))</script>
+<script src="./饿了么联名卡_files/ubt.min.js"></script>
+<script src="./饿了么联名卡_files/vue.runtime.min.js"></script>
+<script src="./饿了么联名卡_files/vue-img.min.js"></script>
+<script src="./饿了么联名卡_files/creditcard.js"></script>
+<script src="./饿了么联名卡_files/index.original.js"></script>
+<script src="./饿了么联名卡_files/perf.min.js" crossorigin=""></script>
+<script src="./饿了么联名卡_files/vue.min.js" crossorigin="anonymous"></script>
+<script type="module" src="./饿了么联名卡_files/vendor.a1d87a4.js" native="true"></script>
+<script type="module" src="./饿了么联名卡_files/sns-sdk.c714915.js" native="true"></script>
+<script type="module" src="./饿了么联名卡_files/creditcard.21d0644.js" native="true"></script>
+<script type="text/javascript" src="./饿了么联名卡_files/vendor.a1d87a4.es5.min.js" nomodule=""></script>
+<script type="text/javascript" src="./饿了么联名卡_files/sns-sdk.c714915.es5.min.js" nomodule=""></script>
+<script type="text/javascript" src="./饿了么联名卡_files/creditcard.21d0644.es5.min.js" nomodule=""></script>
+</body>
+</html>
