@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-表单校验-1</title>
+    <script src="../public/vue.js"></script>
+</head>
+<body>
+    <form action="#" id="app" @submit="checkForm" method="post">
+
+        <p v-if="errors.length">
+            <b>Please correct the following error(s):</b>
+            <ul>
+                <li v-for="error in errors">{{ error }}</li>
+            </ul>
+        </p>
+
+        <p>
+            <label for="name">New Product Name: </label>
+            <input type="text" name="name" id="name" v-model="name">
+        </p>
+
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+
+    </form>
+
+    <script>
+        const apiUrl = 'https://openwhisk.ng.bluemix.net/api/v1/web/rcamden%40us.ibm.com_My%20Space/safeToDelete/productName.json?name='
+
+        const app = new Vue({
+            el: "#app",
+            data: {
+                errors: [],
+                name: ""
+            },
+            methods: {
+                checkForm: function (e) {
+                    e.preventDefault();
+                    this.errors = [];
+                    if(this.name === ''){
+                        this.errors.push("Product name is required.");
+                    } else {
+                        fetch(apiUrl+encodeURIComponent(this.name))
+                        .then( res => res.json())
+                        .then( res => {
+                            if(res.error) {
+                                this.errors.push(res.error);
+                            } else {
+                                alert("ok");
+                            }
+                        })
+                        .catch( res => {
+                            console.log(res.error);
+                        })
+
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

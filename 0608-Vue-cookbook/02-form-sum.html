@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-表单校验-sum</title>
+    <script src="../public/vue.js"></script>
+</head>
+<body>
+    <form action="#" @submit="checkForm" method="post" id="app" novalidate="true">
+
+        <p v-if="errors.length">
+            <b>Please correct the following errors: </b>
+            <ul>
+                <li v-for="error in errors">{{ error }}</li>
+            </ul>
+        </p>
+
+        <p>
+            Given a budget of 100 dollars, indicate how much you would spend on the following features for the next generation Star Destroyer. Your total must sum up to 100.
+        </p>
+
+        <p>
+            <input type="number" name="weapons" v-model.number="weapons"> Weapons <br/>
+            <input type="number" name="shields" v-model.number="shields"> Shields <br/>
+            <input type="number" name="coffee" v-model.number="coffee"> Coffee <br/>
+            <input type="number" name="ac" v-model.number="ac"> Air Conditioning <br/>
+            <input type="number" name="mousedroids" v-model.number="mousedroids"> Mouse Droids </br>
+        </p>
+
+        <p>
+            Current Total: {{total}}
+        </p>
+
+        <p><input type="submit" value="Submit"></p>
+
+    </form>
+
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                errors: [],
+                weapons: 0,
+                shields: 0,
+                coffee: 0,
+                ac: 0,
+                mousedroids: 0
+            },
+            computed: {
+                total: function () {
+                    return Number(this.weapons) + Number(this.shields) + Number(this.coffee) + Number(this.ac) + Number(this.mousedroids);
+                }
+            },
+            methods: {
+                checkForm: function (e) {
+                    this.errors = [];
+                    if(this.total != 100) this.errors.push("Total must be 100!");
+                    if(!this.errors.length) return true;
+                    e.preventDefault();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

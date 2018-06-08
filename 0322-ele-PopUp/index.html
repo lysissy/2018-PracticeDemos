@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ele</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- 设置页面尺寸相关 -->
+    <script>
+        (function (j) {
+            var f;
+            var m = j.navigator.appVersion.match(/iphone/gi) ? j.devicePixelRatio : 1;
+            var e = 1;
+            var b = document.documentElement;
+            var l = document.createElement("meta");
+            var g = document.getElementsByTagName("html")[0];
+            var i = parseInt(k(g, "fontSize"));
+
+            function c() {
+                var h = navigator.userAgent;
+                var p = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+                var n = true;
+                for (var o = 0; o < p.length; o++) {
+                    if (h.indexOf(p[o]) > 0) {
+                        n = false;
+                        break
+                    }
+                }
+                return n
+            }
+
+            function k(n, h) {
+                if (n.currentStyle) {
+                    return n.currentStyle[h]
+                } else {
+                    return getComputedStyle(n, false)[h]
+                }
+            }
+
+            function d() {
+                var h = i / 16;
+                j.rem = Math.min(b.getBoundingClientRect().width, 750) / (16 * h);
+                b.style.fontSize = j.rem + "px"
+            }
+
+            j.addEventListener("resize", function () {
+                clearTimeout(f);
+                f = setTimeout(d, 300)
+            }, false);
+            j.addEventListener("pageshow", function (h) {
+                if (h.persisted) {
+                    clearTimeout(f);
+                    f = setTimeout(d, 300)
+                }
+            }, false);
+            b.setAttribute("duiba-dpr", m);
+            l.setAttribute("name", "viewport");
+            l.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no");
+            if (b.firstElementChild) {
+                b.firstElementChild.appendChild(l)
+            } else {
+                var a = document.createElement("div");
+                a.appendChild(l);
+                document.write(a.innerHTML)
+            }
+            d()
+        })(window);
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+        #app {
+            height: 100%;
+        }
+
+        .plugin {
+            position: fixed;
+            top:0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 101;
+            width: 16rem;
+            height: 100%;
+            background-color: rgba(0,0,0,.7);
+        }
+        .plugin .close {
+            position: absolute;
+            width: 1.1rem;
+            height: 1.1rem;
+            right: 10%;
+            top: 5%;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAMAAADypuvZAAAAOVBMVEX///8AAAD///////////////////////////////////////////////////////////////////9ESdXCAAAAE3RSTlOAADF8eQs5Z0kSbVwsJ1E1FRQ9RiJ5MgAAATpJREFUSMe91uuSgjAMBeAjSXqBouj7P+y6XReFtKR2HM8vneGbQi9pcOrIp5CkMI1MxOMUkrQgcR6beCcGksBQoSBHyDGKYVdF0aMav5TRzDgIzyU0EA5Dg0YXmLns0Uw2onmLFkZDeNkgj6b4V+TQGPdEwq2IZUUBa85XPaq7ntff4R8JYU28L9jO3NcnPmdQHsjtXnrYmc0T7oH8/pnh4L//QwIoVTWAZJRQV9ogZRRQUjWDkNGEoqoYTBmNKCsqGowZMcoqFg04I6CistGpI8TfsQg6lBHbI+nXG+1v0hMx2bOnpzzY66QXN723I1JG8t7eE3U07F3u9SG0z5NTx90+uSSqsNg1IqgSZlcjlv5i2V+WT5FbDMeeq6bvUuu/Pvsv6v6WIOdGZUK37janv6Hqb92+11n+ADo6Ccao/GT7AAAAAElFTkSuQmCC);
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            z-index: 105;
+        }
+        .plugin .content {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+        .plugin .background {
+            position: absolute;
+            width: 13.952rem;
+            height: 17.96rem;
+            top:0;
+            left: 1.216rem;
+            background-size: 100%;
+            background-image:url(images/background.png);
+            background-repeat: no-repeat;
+            z-index: 15;
+        }
+        .plugin .joker {
+            position: absolute;
+            width: 7.23rem;
+            height: 6.336rem;
+            top: .426rem;
+            left: 6.635rem;
+            background-size: 100% 100%;
+            z-index: 10;
+            animation: joker .8s infinite;
+        }
+        .plugin .gift {
+            position: absolute;
+            width: 1.57rem;
+            height: 1.856rem;
+            top: 5.056rem;
+            left: 3.904rem;
+            background-size: 100%;
+            background-image: url(data:image/png;base64,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);
+            z-index: 1;
+            animation: gift .8s infinite;
+        }
+        .plugin .silk {
+            position: absolute;
+            width: 14.315rem;
+            height: 6.48rem;
+            top: 4.2rem;
+            left: 1.152rem;
+            background-size: 100%;
+            background-image: url(images/caidai.png);
+            z-index: 5;
+            animation: caidai .8s infinite;
+        }
+        .plugin .button {
+            position: absolute;
+            width: 3.434rem;
+            height: 3.63rem;
+            top: 17.835rem;
+            left: 6.12rem;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            animation: button .5s infinite;
+        }
+
+        @keyframes joker {
+            0% {
+                top: .426rem;
+                background-image: url(images/joker1.png);
+            }
+            50% {
+                top: 3.328rem;
+                background-image: url(images/joker1.png);
+            }
+            100%, 50.1% {
+                top: 3.328rem;
+                background-image: url(images/joker2.png);
+            }
+        }
+
+        @keyframes gift {
+            0% {
+                top: .42rem;
+            }
+            100%, 50% {
+                top: 3.28rem;
+            }
+        }
+
+        @keyframes caidai {
+            0%, 50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes button {
+            0%, 50% {
+                background-image: url(images/button1.png);
+            }
+            100%, 50.1% {
+                background-image: url(images/button2.png);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="plugin">
+            <div class="close"></div>
+            <a href="javascript:;" class="content">
+                <div class="background"></div>
+                <div class="joker"></div>
+                <div class="gift"></div>
+                <div class="silk"></div>
+                <div class="button"></div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
